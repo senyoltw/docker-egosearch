@@ -1,0 +1,14 @@
+{
+  "name": "egosearch",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Twiiter egosearch using docker",
+  "author": "senyoltw",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ntwitter": ">=0.5.0",
+    "pushbullet": ">=1.4.3"
+  }
+}
