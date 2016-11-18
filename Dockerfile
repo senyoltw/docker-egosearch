@@ -1,1 +1,8 @@
 FROM node:onbuild
+ENV  keyword=keyword
+ENV  PushBullet_device=PushBullet_device
+ENV  PushBullet_Access_Token=PushBullet_Access_Token 
+ENV  twitter_consumer_key=twitter_consumer_key
+ENV  twitter_consumer_secret=twitter_consumer_secret
+ENV  twitter_access_token_key=twitter_access_token_key
+ENV  twitter_access_token_secret=twitter_access_token_secret
