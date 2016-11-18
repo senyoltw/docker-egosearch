@@ -1,14 +1,14 @@
 // エラー処理は終了にしているのでforeverなどでプロセス監視してください
-var keyword = 'せにょ|セニョ'
-var device = '通知するデバイス。登録したメールアドレスならすべてのデバイスに通知'
+var keyword = process.env.keyword
+var device =  process.env.PushBullet_device
 var PushBullet = require('pushbullet');
-var pusher = new PushBullet('PushBulletのAccess Token');
+var pusher = new PushBullet(process.env.PushBullet_Access_Token);
 var twitter = require('ntwitter');
 var twit = new twitter({
-  consumer_key: 'dev.twitter.comで作ったconsumer_key',
-  consumer_secret: 'dev.twitter.comで作ったconsumer_secret',
-  access_token_key: 'dev.twitter.comで作ったaccess_token_key',
-  access_token_secret: 'dev.twitter.comで作ったaccess_token_secret'
+  consumer_key: process.env.twitter_consumer_key,
+  consumer_secret: process.env.twitter_consumer_secret,
+  access_token_key: process.env.twitter_access_token_key,
+  access_token_secret: process.env.twitter_access_token_secret
 });
 
 twit.stream('user',  function(stream) {
