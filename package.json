@@ -8,7 +8,7 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "ntwitter": ">=0.5.0",
-    "pushbullet": ">=1.4.3"
+    "twitter": "latest",
+    "pushbullet": "latest"
   }
 }
