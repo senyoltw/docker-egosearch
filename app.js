@@ -3,7 +3,7 @@ var keyword = process.env.keyword
 var device =  process.env.PushBullet_device
 var PushBullet = require('pushbullet');
 var pusher = new PushBullet(process.env.PushBullet_Access_Token);
-var twitter = require('ntwitter');
+var twitter = require('twitter');
 var twit = new twitter({
   consumer_key: process.env.twitter_consumer_key,
   consumer_secret: process.env.twitter_consumer_secret,
@@ -24,14 +24,9 @@ twit.stream('user',  function(stream) {
      });
     }
   });
-  stream.on('end', function (response) {
+  stream.on('error', function (response) {
     // Handle a disconnection
-    console.log('twitter disconnection error. exit.');
-    process.exit(1);
-  });
-  stream.on('destroy', function (response) {
-    // Handle a 'silent' disconnection from Twitter, no end/error event fired
-    console.log('twitter disconnection error?(no end/error event fired) exit.');
+    console.log('twitter error. exit.');
     process.exit(1);
   });
 });
