@@ -22,3 +22,9 @@ docker環境があるところで以下コマンドで実行
 docker.io/senyoltw/twitter_egosearch
 ```
 ちゃんとpsやlogsで動いていたら成功です。あとはよしなにpushbulletアプリを入れて承認欲求をみたしてください。
+
+# arukasで実行する場合
+```
+CMD node webserver.js&npm start
+```
+と実行してエンドポイント用WEBサーバを立ち上げてください。
