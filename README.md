@@ -25,6 +25,6 @@ docker.io/senyoltw/twitter_egosearch
 
 # arukasで実行する場合
 ```
-CMD node webserver.js&npm start
+CMD node webserver.js
 ```
-と実行してエンドポイント用WEBサーバを立ち上げてください。
+と実行してエンドポイント用WEBサーバを経由して立ち上げてください。
