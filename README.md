@@ -10,15 +10,15 @@ https://www.pushbullet.com/
 
 docker環境があるところで以下コマンドで実行
 ```
-# git clone https://github.com/senyoltw/docker-egosearch.git
-# cd docker-egosearch
-# vi app.js
-
-(エゴサーチしたいワードを書き換えたり、上で取得したトークンを記載する)
-
-# docker build -t egosearch .
-# docker run --restart=always --name egosearch -d egosearch
-# docker ps
-# docker logs egosearch
+# docker pull senyoltw/twitter_egosearch
+# docker run \
+-e keyword="せにょ|senyoltw" \
+-e PushBullet_device='取得したやつ' \
+-e PushBullet_Access_Token='取得したやつ' \
+-e twitter_consumer_key='取得したやつ' \
+-e twitter_consumer_secret='取得したやつ' \
+-e twitter_access_token_key='取得したやつ' \
+-e twitter_access_token_secret='取得したやつ' \
+docker.io/senyoltw/twitter_egosearch
 ```
 ちゃんとpsやlogsで動いていたら成功です。あとはよしなにpushbulletアプリを入れて承認欲求をみたしてください。
