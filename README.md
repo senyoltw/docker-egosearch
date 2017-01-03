@@ -12,8 +12,8 @@ docker環境があるところで以下コマンドで実行
 ```
 # docker pull senyoltw/twitter_egosearch
 # docker run \
--e keyword="せにょ|senyoltw" \
--e PushBullet_device='取得したやつ' \
+-e keyword="エゴサしたい単語|正規表現も大丈夫" \
+-e PushBullet_device='プッシュしたいデバイス' \
 -e PushBullet_Access_Token='取得したやつ' \
 -e twitter_consumer_key='取得したやつ' \
 -e twitter_consumer_secret='取得したやつ' \
