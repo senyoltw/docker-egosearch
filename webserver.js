@@ -12,6 +12,7 @@ app.stderr.on('data', function (data) {
 
 app.on('close', function (code) {
   console.log('child process exited with code ' + code);
+  process.exit(1);
 });
 
 http.createServer(function(req,res){
