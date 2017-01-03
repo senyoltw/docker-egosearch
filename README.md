@@ -1,5 +1,5 @@
 # docker-egosearch
-Twitterのタイムラインをエゴサしてpushbulletを使って通知するアプリ
+Twitterのタイムラインをエゴサしてpushbulletを使って通知する dockerコンテナ
 
 # 使い方
 apps.twitter.comからConsumer Key / Consumer Secret / Access Token / Access Token Secret を取得  
