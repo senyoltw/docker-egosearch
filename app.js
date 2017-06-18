@@ -11,6 +11,15 @@ var twit = new twitter({
   access_token_secret: process.env.twitter_access_token_secret
 });
 
+pusher.note(device,'New Search', 'New Search Start' , function(error, response) {
+      if (error) {
+        console.log('pushBullet disconnection error. exit.');
+        process.exit(1);
+      } else {
+        console.log(New Search Start);
+      }
+});
+
 twit.stream('user',  function(stream) {
   stream.on('data', function (data) {
     if (data && data.user && data.text.search(keyword)!=-1) {
