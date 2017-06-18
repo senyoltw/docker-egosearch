@@ -16,7 +16,7 @@ pusher.note(device,'New Search', 'New Search Start' , function(error, response) 
         console.log('pushBullet disconnection error. exit.');
         process.exit(1);
       } else {
-        console.log(New Search Start);
+        console.log('New Search Start');
       }
 });
 
