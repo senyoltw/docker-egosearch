@@ -22,6 +22,7 @@ docker環境があるところで以下コマンドで実行
 docker.io/senyoltw/twitter_egosearch
 ```
 ちゃんとpsやlogsで動いていたら成功です。あとはよしなにpushbulletアプリを入れて承認欲求をみたしてください。
+ちゃんと実行するときはdocker run -d --restart=always にするとよいでしょう。
 
 # arukasで実行する場合
 ```
