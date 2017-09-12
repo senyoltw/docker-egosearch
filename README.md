@@ -24,8 +24,17 @@ docker.io/senyoltw/twitter_egosearch
 ちゃんとpsやlogsで動いていたら成功です。あとはよしなにpushbulletアプリを入れて承認欲求をみたしてください。
 ちゃんと実行するときはdocker run -d --restart=always にするとよいでしょう。
 
-# arukasで実行する場合
+# docker-egosearchで実行する場合
 ```
-CMD node webserver.js
+# pwd
+/docker/twitter_egosearch
+# ls
+docker-compose.yml
+# vi docker-compose.yml
+# docker-compose up -d
+Creating network "twitteregosearch_default" with the default driver
+Creating twitteregosearch_twitter_egosearch_1 ... 
+Creating twitteregosearch_twitter_egosearch_1 ... done
+
 ```
-と実行してエンドポイント用WEBサーバを経由して立ち上げてください。
+適当に情報変更してdocker-compose upで起動します。良かったですね。
