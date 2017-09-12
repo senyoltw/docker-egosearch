@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  twitter_egosearch:
+    image: senyoltw/twitter_egosearch
+    restart: always
+    environment:
+      - keyword=せにょ|セニョ|ワタナベ書店
+      - PushBullet_device=xxxxxx@gmail.com
+      - PushBullet_Access_Token=xxxxxxxxxxxxxxxx
+      - twitter_consumer_key=xxxxxxxxxxxxxxxx
+      - twitter_consumer_secret=xxxxxxxxxxxxxxxx
+      - twitter_access_token_key=xxxxxxxxxxxxxxxx
+      - twitter_access_token_secret=xxxxxxxxxxxxxxxx
