@@ -24,7 +24,7 @@ docker.io/senyoltw/twitter_egosearch
 ちゃんとpsやlogsで動いていたら成功です。あとはよしなにpushbulletアプリを入れて承認欲求をみたしてください。
 ちゃんと実行するときはdocker run -d --restart=always にするとよいでしょう。
 
-# docker-egosearchで実行する場合
+# docker-composeで実行する場合
 ```
 # pwd
 /docker/twitter_egosearch
