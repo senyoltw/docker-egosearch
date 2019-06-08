@@ -1,14 +1,14 @@
 {
-  "name": "egosearch",
+  "name": "twiiter_egosearch",
   "private": true,
-  "version": "0.0.1",
-  "description": "Twiiter egosearch using docker",
+  "version": "0.0.2",
+  "description": "Twiiter egosearch",
   "author": "senyoltw",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
     "twitter": "latest",
-    "pushbullet": "latest"
+    "axios": "latest"
   }
 }

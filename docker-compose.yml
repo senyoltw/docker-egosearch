@@ -5,10 +5,9 @@ services:
     image: senyoltw/twitter_egosearch
     restart: always
     environment:
-      - keyword=せにょ|セニョ|ワタナベ書店
-      - PushBullet_device=xxxxxx@gmail.com
-      - PushBullet_Access_Token=xxxxxxxxxxxxxxxx
-      - twitter_consumer_key=xxxxxxxxxxxxxxxx
-      - twitter_consumer_secret=xxxxxxxxxxxxxxxx
-      - twitter_access_token_key=xxxxxxxxxxxxxxxx
-      - twitter_access_token_secret=xxxxxxxxxxxxxxxx
+      - keyword=せにょ|セニョ|ワタナベ書店|お前が神を殺したいなら
+      - webhook_url=https://maker.ifttt.com/trigger/{event}/with/key/{secret key}
+      - twitter_consumer_key=XXXXXXX
+      - twitter_consumer_secret=XXXXXXX
+      - twitter_access_token_key=XXXXXXX
+      - twitter_access_token_secret=XXXXXXX
