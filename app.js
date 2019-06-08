@@ -64,7 +64,7 @@ async function main () {
       since_id = timeline[0].id_str
     }else{
       // There are no new tweets.
-      console.log('nodata');
+      // console.log('nodata');
     }
   }
 }
