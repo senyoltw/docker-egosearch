@@ -44,15 +44,17 @@ async function main () {
   console.log('twitter search start!');
   let params = {count:1, tweet_mode:'extended'};
   let timeline = await get_home_timeline(params)
-  let since_id = timeline[0].id_str
   while (true){
     // twitter api 15times/15min
     await new Promise(r => setTimeout(r, 61000));
+    // next search from since_id  (that is, more recent than) 
+    since_id = timeline[0].id_str
     params = {count:200, since_id: since_id, tweet_mode:'extended'};
     timeline = await get_home_timeline(params);
     if (Object.keys(timeline).length) {
       // There are new tweets.
       Object.keys(timeline).forEach(function(key) {
+        // keyword hit
         let tweet = this[key];
         let hit = search_tweet(tweet, keyword);
         if (Object.keys(hit).length) {
@@ -60,11 +62,8 @@ async function main () {
           post_webhook(hit);
         }
       }, timeline);
-      // next search from since_id  (that is, more recent than) 
-      since_id = timeline[0].id_str
     }else{
       // There are no new tweets.
-      // console.log('nodata');
     }
   }
 }
