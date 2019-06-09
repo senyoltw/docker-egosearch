@@ -54,10 +54,11 @@ async function main () {
     if (Object.keys(timeline).length) {
       // There are new tweets.
       Object.keys(timeline).forEach(function(key) {
-        // keyword hit
+        // analysis new tweet. one by one.
         let tweet = this[key];
         let hit = search_tweet(tweet, keyword);
         if (Object.keys(hit).length) {
+          // keyword hit
           console.log(hit);
           post_webhook(hit);
         }
