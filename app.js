@@ -48,7 +48,7 @@ async function main () {
     // twitter api 15times/15min
     await new Promise(r => setTimeout(r, 61000));
     // next search from since_id  (that is, more recent than) 
-    since_id = timeline[0].id_str
+    let since_id = timeline[0].id_str
     params = {count:200, since_id: since_id, tweet_mode:'extended'};
     timeline = await get_home_timeline(params);
     if (Object.keys(timeline).length) {
