@@ -53,6 +53,7 @@ async function main() {
       Object.keys(timeline).forEach(function (key) {
         // analysis new tweet. one by one.
         let tweet = this[key];
+        console.log(`user:%s\ttweet:%s\tURL:%s`, data.user.name + "@" + data.user.screen_name, data.full_text, "https://twitter.com/" + data.user.screen_name + "/status/" + data.id_str);
         let hit = search_tweet(tweet, keyword);
         if (Object.keys(hit).length) {
           // keyword hit
