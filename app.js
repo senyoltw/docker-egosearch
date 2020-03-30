@@ -56,7 +56,7 @@ async function main() {
         let hit = search_tweet(tweet, keyword);
         if (Object.keys(hit).length) {
           // keyword hit
-          console.log(hit);
+          // console.log(hit);
           post_webhook(hit);
         }
       }, timeline);
