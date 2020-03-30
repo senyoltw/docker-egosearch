@@ -13,7 +13,7 @@ const client = new twitter({
 function post_webhook(data) {
   axios.post(webhook_url, data)
     .catch(function (error) {
-      console.error('webhook error : %o', error);
+      console.error('webhook ERR! : %o', error);
       process.exit(1);
     })
 }
@@ -24,7 +24,7 @@ function get_home_timeline(params) {
       return tweets;
     })
     .catch(function (error) {
-      console.error('twitter error : %o', error);
+      console.error('twitter ERR! : %o', error);
       process.exit(1);
     })
 }
@@ -39,7 +39,7 @@ function search_tweet(data, keyword) {
 }
 
 async function main() {
-  console.log('twitter search start!');
+  console.info('twitter search start!');
   let params = { count: 1, tweet_mode: 'extended' };
   let timeline = await get_home_timeline(params)
   let since_id = timeline[0].id_str
@@ -53,7 +53,7 @@ async function main() {
       Object.keys(timeline).forEach(function (key) {
         // analysis new tweet. one by one.
         let tweet = this[key];
-        console.log(tweet);
+        console.log('tweet : %o', tweet);
         let hit = search_tweet(tweet, keyword);
         if (Object.keys(hit).length) {
           // keyword hit
