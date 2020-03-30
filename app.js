@@ -13,7 +13,8 @@ const client = new twitter({
 function post_webhook(data) {
   axios.post(webhook_url, data)
     .catch(function (error) {
-      console.error('webhook error.', error);
+      console.log('webhook error.');
+      console.log(error);
       process.exit(1);
     })
 }
@@ -24,7 +25,8 @@ function get_home_timeline(params) {
       return tweets;
     })
     .catch(function (error) {
-      console.error('twitter error.', error);
+      console.log('twitter error.');
+      console.log(error);
       process.exit(1);
     })
 }
