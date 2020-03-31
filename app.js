@@ -31,7 +31,7 @@ function get_home_timeline(params) {
 
 function search_tweet(data, keyword) {
   if (data.full_text.search(keyword) != -1) {
-    // fot IFTTT rich notification https://ifttt.com/maker_webhooks
+    // for IFTTT rich notification https://ifttt.com/maker_webhooks
     let body = { value1: data.user.name + "@" + data.user.screen_name, value2: data.full_text, value3: "https://twitter.com/" + data.user.screen_name + "/status/" + data.id_str };
     return body;
   } else {
